@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pieeyy The Ide - Toko Rokok Elegan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav role="navigation" aria-label="Main navigation">
+        <div class="logo" tabindex="0">Pieeyy The Ide</div>
+        <div class="nav-links">
+          <button type="button" aria-current="page" id="nav-home" onclick="showSection('home')">Beranda</button>
+          <button type="button" id="nav-produk" onclick="showSection('produk')">Produk</button>
+          <button type="button" id="nav-keranjang" onclick="showSection('keranjang')">Keranjang</button>
+          <button type="button" id="nav-kontak" onclick="showSection('kontak')">Kontak</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section id="home" class="active" tabindex="-1" aria-label="Beranda">
+      <div class="hero">
+        <h1>Selamat Datang di Pieeyy The Ide</h1>
+        <p>Toko kebutuhan rokok andalan Anda dengan produk asli dan pelayanan cepat.</p>
+        <button class="btn-hero" type="button" onclick="showSection('produk')">Jelajahi Produk</button>
+      </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section id="produk" tabindex="-1" aria-label="Kategori Produk" >
+      <div class="products" role="list" aria-live="polite" aria-atomic="true">
+        <article class="product-card" role="listitem" tabindex="0" data-name="Surya Pro" data-price="25000">
+          <img src="surya pro.jpg" alt="Surya Pro" loading="lazy" />
+          <h3>Surya Pro</h3>
+          <p>Rokok kretek dengan cita rasa kuat khas Surya.</p>
+          <span class="product-price">Rp25.000</span>
+          <button class="btn-add" onclick="addToCart('Surya Pro', 25000)">Tambah ke Keranjang</button>
+        </article>
+
+        <article class="product-card" role="listitem" tabindex="0" data-name="Jarum Coklat" data-price="22000">
+          <img src="jarcok.jpg" alt="Jarum Coklat" loading="lazy" />
+          <h3>Jarum Coklat</h3>
+          <p>Rokok khas dengan rasa manis dan lembut.</p>
+          <span class="product-price">Rp22.000</span>
+          <button class="btn-add" onclick="addToCart('Jarum Coklat', 22000)">Tambah ke Keranjang</button>
+        </article>
+
+        <article class="product-card" role="listitem" tabindex="0" data-name="Win Click" data-price="18000">
+          <img src="win.jpg" alt="Win Click" loading="lazy" />
+          <h3>Win Click</h3>
+          <p>Rokok dengan kapsul rasa segar yang menyegarkan.</p>
+          <span class="product-price">Rp18.000</span>
+          <button class="btn-add" onclick="addToCart('Win Click', 18000)">Tambah ke Keranjang</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Keranjang Section -->
+    <section id="keranjang" tabindex="-1" aria-label="Keranjang Belanja">
+      <h2>Keranjang Anda</h2>
+      <ul id="cart-list" role="list" aria-live="polite" aria-atomic="true"></ul>
+      <p>Total: <span id="cart-total">Rp0</span></p>
+      <button class="btn-checkout" onclick="checkout()">Checkout</button>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" tabindex="-1" aria-label="Tentang Kami">
+      <h2>Kontak Kami</h2>
+      <p>
+        Kami adalah toko rokok terpercaya dengan pelayanan cepat dan produk asli.<br/>
+        Hubungi kami via email di <a href="mailto:pieeyy@theide.com">pieeyy@theide.com</a><br/>
+        Atau telepon kami di <a href="tel:+62123456789">+62 123 456 789   
+
+                </p>
+    </section>
+  </main>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
